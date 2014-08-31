@@ -7,8 +7,19 @@ class Attribute(models.Model):
         return self.name
 
     name = models.CharField('Name', max_length=200)
-    defaultValue = models.CharField('Default Value', max_length=200, null=True, blank=True)
-    description = models.CharField('Description', max_length=400, null=True, blank=True)
+    defaultValue = models.CharField(
+        'Default Value',
+        max_length=200,
+        null=True,
+        blank=True
+        )
+    description = models.CharField(
+        'Description',
+        max_length=400,
+        null=True,
+        blank=True
+        )
+
 
 class Group(models.Model):
     def __unicode__(self):  # Python 3: def __str__(self):
@@ -16,19 +27,31 @@ class Group(models.Model):
 
     name = models.CharField('Name', max_length=200)
     parent = models.ForeignKey('self', null=True, blank=True)
-    attributes = models.ManyToManyField(Attribute,
-                                        through='GroupAttributeValue')
+    attributes = models.ManyToManyField(
+        Attribute,
+        through='GroupAttributeValue'
+        )
 
 
 class ThinClient(models.Model):
     def __unicode__(self):  # Python 3: def __str__(self):
         return self.dnsName
 
-    dnsName = models.CharField('DNS Name', max_length=200, null=True, blank=True)
-    mac = models.CharField('MAC Address', max_length=200, null=True, blank=True)
+    dnsName = models.CharField('DNS Name',
+        max_length=200,
+        null=True,
+        blank=True
+        )
+    mac = models.CharField('MAC Address',
+        max_length=200,
+        null=True,
+        blank=True
+        )
     group = models.ForeignKey(Group)
-    attributes = models.ManyToManyField(Attribute,
-                                        through='ThinClientAttributeValue')
+    attributes = models.ManyToManyField(
+        Attribute,
+        through='ThinClientAttributeValue'
+        )
 
 
 class GroupAttributeValue(models.Model):

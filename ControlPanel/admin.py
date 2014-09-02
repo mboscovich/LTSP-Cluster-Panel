@@ -37,6 +37,7 @@ class AttributeAdmin(admin.ModelAdmin):
     ]
     inlines = [AttributeAttributePossibleValuesInline]
 
+
 class GroupAdmin(admin.ModelAdmin):
     list_display = ('name', 'parent')
     search_fields = ['name']

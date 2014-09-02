@@ -11,6 +11,6 @@ Desing
 ------
 Entity Relationship Diagram (ERD):
 ![alt tag](https://github.com/mboscovich/LTSP-Cluster-Panel/blob/master/Diagrama-ER.png)
-(Generated from: http://yuml.me/edit/d104d947)
+(Generated from: http://yuml.me/edit/1373b93a)
 
 

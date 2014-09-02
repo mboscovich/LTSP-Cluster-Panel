@@ -3,6 +3,7 @@ from django.contrib import admin
 # Register your models here.
 from ControlPanel.models import Attribute, Group, ThinClient
 from ControlPanel.models import GroupAttributeValue, ThinClientAttributeValue
+from ControlPanel.models import AttributePossibleValues
 
 
 class GroupAttributeInline(admin.TabularInline):
@@ -15,21 +16,26 @@ class ThinClientAttributeInline(admin.TabularInline):
     extra = 1
 
 
+class AttributeAttributePossibleValuesInline(admin.TabularInline):
+    model = AttributePossibleValues
+    extra = 1
+
+
 class AttributeAdmin(admin.ModelAdmin):
-    list_display = ('name', 'defaultValue', 'description')
+    list_display = ('name', 'description')
     search_fields = ['name']
     actions_on_top = True
     actions_on_bottom = True
     actions_selection_counter = True
     fieldsets = [
-        ('Atributo', {'fields': ['name', 'defaultValue', 'description'],
+        ('Atributo', {'fields': ['name', 'description'],
             'classes': ('wide', 'extrapretty'),
             'description': ('Attributes define specific properties that can be'
                             ' later assigned to ThinClients or groups.'
                             ),
                     }),
     ]
-
+    inlines = [AttributeAttributePossibleValuesInline]
 
 class GroupAdmin(admin.ModelAdmin):
     list_display = ('name', 'parent')

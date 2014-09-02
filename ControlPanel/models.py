@@ -2,23 +2,27 @@ from django.db import models
 
 
 # Create your models here.
+
 class Attribute(models.Model):
     def __unicode__(self):  # Python 3: def __str__(self):
         return self.name
 
     name = models.CharField('Name', max_length=200)
-    defaultValue = models.CharField(
-        'Default Value',
-        max_length=200,
-        null=True,
-        blank=True
-        )
     description = models.CharField(
         'Description',
         max_length=400,
         null=True,
         blank=True
         )
+
+
+class AttributePossibleValues(models.Model):
+    def __unicode__(self):
+        output = "%s : %s" % (self.attribute.name, self.value)
+        return output
+
+    attribute = models.ForeignKey(Attribute)
+    value = models.CharField('Value', max_length=200, null=True, blank=True)
 
 
 class Group(models.Model):

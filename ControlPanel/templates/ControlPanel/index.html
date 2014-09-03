@@ -1,0 +1,12 @@
+{% if thinClients_list %}
+    <ul>
+    {% for thinClient in thinClients_list %}
+        <li><a href="/ControlPanel/thinclient/{{ thinClient.id }}/">
+            {{ thinClient.dnsName }}
+            </a>
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>There isn't thinClients defined.</p>
+{% endif %}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="style.css" />
+    <title>{% block title %}My amazing site{% endblock %}</title>
+</head>
+
+<body>
+    <div id="nav">
+        {% block sidebar %}
+        <h3>Menu</h3>
+        <ul>
+            <li><a href="{% url 'index' %}">ThinClients</a></li>
+            <li><a href="/groups/">Groups</a></li>
+            <li><a href="/attributes/">Attributes</a></li>
+        </ul>
+        {% endblock %}
+    </div>
+
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

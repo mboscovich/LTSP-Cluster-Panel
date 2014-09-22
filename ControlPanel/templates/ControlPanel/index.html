@@ -1,7 +1,13 @@
+{% extends "ControlPanel/base.html" %}
+
+{% block title %}My amazing blogssssssssssssss{% endblock %}
+
+{% block content %}
+
 {% if thinClients_list %}
     <ul>
     {% for thinClient in thinClients_list %}
-        <li><a href="/ControlPanel/thinclient/{{ thinClient.id }}/">
+        <li><a href="{% url 'detail' thinClient.id %}">
             {{ thinClient.dnsName }}
             </a>
         </li>
@@ -10,3 +16,6 @@
 {% else %}
     <p>There isn't thinClients defined.</p>
 {% endif %}
+
+{% endblock %}
+

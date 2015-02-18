@@ -23,6 +23,6 @@ How to test
 
 4) Execute on a terminal: python manage.py runserver
 
-5) Open in a browser http://127.0.0.1:8000/  (username: admin, password: admin)
+5) Open in a browser http://127.0.0.1:8000/ControlPanel or http://127.0.0.1:8000/admin (username: admin, password: admin)
 
 6) Join us :D

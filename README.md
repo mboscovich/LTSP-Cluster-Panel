@@ -20,4 +20,4 @@ How to test
 3) Go to into main directory of code
 4) Execute on a terminal: python manage.py runserver
 5) Open in a browser http://127.0.0.1:8000/
-6) Start coding and colaborate with us :D
+6) Join us :D

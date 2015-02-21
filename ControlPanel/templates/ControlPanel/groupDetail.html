@@ -1,0 +1,16 @@
+{% extends "ControlPanel/base.html" %}
+
+{% block title %}Group Detail{% endblock %}
+
+{% block content %}
+
+<h2>{{ Group.name }}</h2>
+Parent: {{ Group.parent }}
+
+<h3>Atributos asociados</h3>
+<ul>
+{% for atributo in GroupAttrib %}
+    <li><a href="/ControlPanel/attribute/{{atributo.attribute.id}}"> {{ atributo.attribute.name }} </a> : {{atributo.value}}</li>
+{% endfor %}
+</ul>
+{% endblock %}

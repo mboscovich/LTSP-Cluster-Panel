@@ -1,0 +1,21 @@
+{% extends "ControlPanel/base.html" %}
+
+{% block title %}LTSP-Cluster Panel{% endblock %}
+
+{% block content %}
+
+{% if attributes_list %}
+    <ul>
+    {% for attribute in attributes_list %}
+        <li><a href="{% url 'attributeDetail' attribute.id %}">
+            {{ attribute.name }}
+            </a>
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>There isn't attributes defined.</p>
+{% endif %}
+
+{% endblock %}
+

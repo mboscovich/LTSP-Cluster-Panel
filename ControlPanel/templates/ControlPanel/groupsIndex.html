@@ -1,0 +1,21 @@
+{% extends "ControlPanel/base.html" %}
+
+{% block title %}Groups{% endblock %}
+
+{% block content %}
+
+{% if groups_list %}
+    <ul>
+    {% for group in groups_list %}
+        <li><a href="{% url 'groupDetail' group.id %}">
+            {{ group.name }}
+            </a>
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>There isn't groups defined.</p>
+{% endif %}
+
+{% endblock %}
+

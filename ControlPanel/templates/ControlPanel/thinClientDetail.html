@@ -1,24 +1,27 @@
 {% extends "ControlPanel/base.html" %}
 
-{% block title %}My amazing {% endblock %}
+{% block title %}Thin Client Detail{% endblock %}
 
 {% block content %}
 
-<h1>{{ thinclient.dnsName }}</h1>
+<h2>{{ thinclient.dnsName }}</h2>
 MAC: {{ thinclient.mac}}<br>
 Group: {{ thinclient.group.name}}
+
+<h3> Atributos particulares </h3>
 <ul>
-<h2> Atributos particulares </h2>
 {% for atributo in TcAttrib %}
     <li>{{ atributo.attribute.name }} : {{atributo.value}}</li>
 {% endfor %}
-
-<h2> Atributos del grupo </h2>
+</ul>
+<h3> Atributos del grupo </h3>
+<ul>
 {% for atributo in GroupAttrib %}
     <li>{{ atributo.attribute.name }} : {{atributo.value}}</li>
 {% endfor %}
-
-<h2> Atributos definitivos </h2>
+</ul>
+<h3> Atributos definitivos </h3>
+<ul>
 {% for key, value in Attributes.items %}
     <li>{{ key }} : {{value}}</li>
 {% endfor %}

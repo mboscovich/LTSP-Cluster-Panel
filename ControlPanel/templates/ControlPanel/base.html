@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <link rel="stylesheet" href="style.css" />
-    <title>{% block title %}My amazing site{% endblock %}</title>
+    <title>{% block title %}LTSP-Cluster Panel{% endblock %}</title>
 </head>
 
 <body>
@@ -10,11 +10,12 @@
         {% block sidebar %}
         <h3>Menu</h3>
         <ul>
-            <li><a href="{% url 'index' %}">ThinClients</a></li>
-            <li><a href="/groups/">Groups</a></li>
-            <li><a href="/attributes/">Attributes</a></li>
+            | <a href="{% url 'thinClientsIndex' %}">ThinClients</a> |
+            <a href="{% url 'groupsIndex' %}">Groups</a> |
+            <a href="{% url 'attributesIndex' %}">Attributes</a> |
         </ul>
         {% endblock %}
+        <hr>
     </div>
 
     <div id="content">

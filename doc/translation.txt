@@ -1,0 +1,15 @@
+How to add a new language:
+--------------------------
+
+1) Execute: python manage.py makemessages -l LOCALE, ie:
+
+python manage.py makemessages -l en
+
+
+2) Edit the file locale/LOCALE/django.po and translate the text.Edit
+
+
+3) Excute: python manage.py compilemessages
+
+
+4) Restart server.

@@ -10,5 +10,4 @@ urlpatterns = patterns('',
     url(r'^thinclient/(\d+)/$', views.thinClientDetail, name='thinClientDetail'),
     url(r'^group/(\d+)/$', views.groupDetail, name='groupDetail'),
     url(r'^attribute/(\d+)/$', views.attributeDetail, name='attributeDetail'),
-
 )

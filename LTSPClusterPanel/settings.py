@@ -26,6 +26,9 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
+LOCALE_PATHS = (
+    'locale',
+)
 
 # Application definition
 

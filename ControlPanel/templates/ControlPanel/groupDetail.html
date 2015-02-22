@@ -9,8 +9,8 @@ Parent: {{ Group.parent }}
 
 <h3>Atributos asociados</h3>
 <ul>
-{% for atributo in GroupAttrib %}
-    <li><a href="/ControlPanel/attribute/{{atributo.attribute.id}}"> {{ atributo.attribute.name }} </a> : {{atributo.value}}</li>
+{% for attribute in GroupAttrib %}
+    <li><a href="{% url 'attributeDetail' attribute.id %}"> {{ attribute.attribute.name }} </a> : {{attribute.value}}</li>
 {% endfor %}
 </ul>
 {% endblock %}

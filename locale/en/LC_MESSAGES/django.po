@@ -19,11 +19,11 @@ msgstr ""
 
 #: ControlPanel/templates/ControlPanel/base.html:5
 msgid "TitleBase"
-msgstr "PANELASO"
+msgstr "LTSP-Cluster"
 
 #: ControlPanel/templates/ControlPanel/thinClientsIndex.html:3
 msgid "TitleThinClientsIndex"
-msgstr "sldkjflskdfjlk"
+msgstr "Thin clients list"
 
 #: templates/admin/base_site.html:4
 msgid "Organization"
@@ -31,4 +31,4 @@ msgstr "LTSP-Cluster"
 
 #: templates/admin/base_site.html:13
 msgid "SiteName"
-msgstr "AdminPanel"
+msgstr "Admin panel"

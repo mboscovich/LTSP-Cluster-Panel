@@ -8,7 +8,7 @@
 {% if thinClients_list %}
     <ul>
     {% for thinClient in thinClients_list %}
-        <li><a href="{% url 'thinClientDetail' thinClient.id %}">
+        <li><a href="{% url 'admin:ControlPanel_thinclient_change' thinClient.id %}">
             {{ thinClient.dnsName }}
             </a>
         </li>

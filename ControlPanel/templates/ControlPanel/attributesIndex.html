@@ -3,11 +3,11 @@
 {% block title %}LTSP-Cluster Panel{% endblock %}
 
 {% block content %}
-
+{% load admin_urls %}
 {% if attributes_list %}
     <ul>
     {% for attribute in attributes_list %}
-        <li><a href="{% url 'attributeDetail' attribute.id %}">
+        <li><a href="{% url 'admin:ControlPanel_attribute_change' attribute.id %}">
             {{ attribute.name }}
             </a>
         </li>

@@ -47,6 +47,39 @@ INSTALLED_APPS = (
     'ControlPanel',
 )
 
+# Django Suit configuration example
+SUIT_CONFIG = {
+    # header
+    'ADMIN_NAME': 'LTSP-Cluster Panel',
+    'HEADER_DATE_FORMAT': 'l, j. F Y',
+    # 'HEADER_TIME_FORMAT': 'H:i',
+
+    # forms
+    'SHOW_REQUIRED_ASTERISK': True,  # Default True
+    'CONFIRM_UNSAVED_CHANGES': True, # Default True
+
+    # menu
+    # 'SEARCH_URL': '/admin/auth/user/',
+    'SEARCH_URL': '/admin/ControlPanel/thinclient/',
+    # 'MENU_ICONS': {
+    #    'sites': 'icon-leaf',
+    #    'auth': 'icon-lock',
+    # },
+    'MENU_OPEN_FIRST_CHILD': True, # Default True
+    'MENU_EXCLUDE': ('auth.group','home'),
+    'MENU': (
+          {'app': 'controlpanel', 'label': 'LTSP-cluster', 'models': (
+              'ControlPanel.thinclient',
+              'ControlPanel.group',
+              'ControlPanel.attribute')},
+          {'app': 'auth', 'label': 'Admin', 'icon': 'icon-lock'},
+
+    ),
+    # misc
+    # 'LIST_PER_PAGE': 15
+}
+
+
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',

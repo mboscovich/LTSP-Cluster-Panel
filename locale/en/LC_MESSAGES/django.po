@@ -31,7 +31,7 @@ msgstr "Each thinclient must belong to a group and can contain special attribute
 
 #: ControlPanel/templates/ControlPanel/base.html:5
 msgid "TitleBase"
-msgstr ""
+msgstr "LTSP-Cluster-Panel"
 
 #: ControlPanel/templates/ControlPanel/thinClientsIndex.html:4
 msgid "TitleThinClientsIndex"
@@ -39,8 +39,8 @@ msgstr ""
 
 #: templates/admin/base_site.html:4
 msgid "Organization"
-msgstr ""
+msgstr "LTSP-Cluster"
 
 #: templates/admin/base_site.html:13
 msgid "SiteName"
-msgstr ""
+msgstr "LTSP-Cluster-Panel"

@@ -11,6 +11,6 @@ urlpatterns = patterns('',
     url(r'^ControlPanel/', include('ControlPanel.urls')),
     #url(r'^admin/$', RedirectView.as_view(url=reverse_lazy('admin:app_list',
         #args=('ControlPanel',)))),
-    url(r'^admin/$',RedirectView.as_view(url='/admin/ControlPanel/thinclient/')),
+    #url(r'^admin/$',RedirectView.as_view(url='/admin/ControlPanel/')),
     url(r'^admin/', include(admin.site.urls)),
 )

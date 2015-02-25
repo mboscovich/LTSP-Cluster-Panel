@@ -60,7 +60,7 @@ SUIT_CONFIG = {
 
     # menu
     # 'SEARCH_URL': '/admin/auth/user/',
-    'SEARCH_URL': '/admin/ControlPanel/thinclient/',
+    'SEARCH_URL': '/admin/ControlPanel/Node/',
     # 'MENU_ICONS': {
     #    'sites': 'icon-leaf',
     #    'auth': 'icon-lock',
@@ -69,7 +69,7 @@ SUIT_CONFIG = {
     'MENU_EXCLUDE': ('auth.group','home'),
     'MENU': (
           {'app': 'controlpanel', 'label': 'LTSP-cluster', 'models': (
-              'ControlPanel.thinclient',
+              'ControlPanel.node',
               'ControlPanel.group',
               'ControlPanel.attribute')},
           {'app': 'auth', 'label': 'Admin', 'icon': 'icon-lock'},
@@ -108,6 +108,7 @@ DATABASES = {
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
+#LANGUAGE_CODE = 'es-AR'
 
 TIME_ZONE = 'UTC'
 

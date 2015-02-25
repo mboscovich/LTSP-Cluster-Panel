@@ -37,7 +37,7 @@ class Group(models.Model):
         )
 
 
-class ThinClient(models.Model):
+class Node(models.Model):
     def __unicode__(self):  # Python 3: def __str__(self):
         return self.dnsName
 
@@ -54,7 +54,7 @@ class ThinClient(models.Model):
     group = models.ForeignKey(Group)
     attributes = models.ManyToManyField(
         Attribute,
-        through='ThinClientAttributeValue'
+        through='NodeAttributeValue'
         )
 
 
@@ -66,9 +66,9 @@ class GroupAttributeValue(models.Model):
     value = models.CharField(max_length=200, null=True, blank=True)
 
 
-class ThinClientAttributeValue(models.Model):
+class NodeAttributeValue(models.Model):
     def __unicode__(self):  # Python 3: def __str__(self):
-        return "%s: %s = %s" % (self.thinClient, self.attribute, self.value)
+        return "%s: %s = %s" % (self.Node, self.attribute, self.value)
     attribute = models.ForeignKey(Attribute)
-    thinClient = models.ForeignKey(ThinClient)
+    Node = models.ForeignKey(Node)
     value = models.CharField(max_length=200, null=True, blank=True)

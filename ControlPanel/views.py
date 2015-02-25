@@ -5,17 +5,17 @@ from django.views import generic
 
 # Create your views here.
 
-from ControlPanel.models import ThinClient, Group, ThinClientAttributeValue
+from ControlPanel.models import Node, Group, NodeAttributeValue
 from ControlPanel.models import GroupAttributeValue, Attribute
 
 
-class thinClientsIndex(generic.ListView):
-    template_name = 'ControlPanel/thinClientsIndex.html'
-    context_object_name = 'thinClients_list'
+class NodesIndex(generic.ListView):
+    template_name = 'ControlPanel/NodesIndex.html'
+    context_object_name = 'Nodes_list'
 
     def get_queryset(self):
-        """Return all thinclients."""
-        return ThinClient.objects.order_by('dnsName')
+        """Return all Nodes."""
+        return Node.objects.order_by('dnsName')
 
 
 class groupsIndex(generic.ListView):
@@ -36,19 +36,19 @@ class attributesIndex(generic.ListView):
         return Attribute.objects.order_by('name')
 
 
-def thinClientDetail(request, thinclient_id):
-    thinclient = get_object_or_404(ThinClient, pk=thinclient_id)
-    TcAttrib = ThinClientAttributeValue.objects.filter(thinClient=thinclient.id)
-    GroupAttrib = GroupAttributeValue.objects.filter(group=thinclient.group.id)
+def NodeDetail(request, Node_id):
+    Node = get_object_or_404(Node, pk=Node_id)
+    TcAttrib = NodeAttributeValue.objects.filter(Node=Node.id)
+    GroupAttrib = GroupAttributeValue.objects.filter(group=Node.group.id)
     Attributes = {}
     for attrib in GroupAttrib:
         Attributes[attrib.attribute.name]=attrib.value
     for attrib in TcAttrib:
         Attributes[attrib.attribute.name]=attrib.value
 
-    return render(request, 'ControlPanel/thinClientDetail.html',
+    return render(request, 'ControlPanel/NodeDetail.html',
                     {
-                        'thinclient': thinclient,
+                        'Node': Node,
                         'TcAttrib': TcAttrib,
                         'GroupAttrib': GroupAttrib,
                         'Attributes': Attributes,

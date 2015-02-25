@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-22 14:50+0000\n"
+"POT-Creation-Date: 2015-02-25 21:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,18 +17,30 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#: ControlPanel/admin.py:33
+msgid "Model_Attribute_desc"
+msgstr "Attributes define specific properties that can be later assigned to ThinClients or groups."
+
+#: ControlPanel/admin.py:46
+msgid "Model_Group_desc"
+msgstr "Groups allow you tu associate a set of attributes and values to a group of ThinClients."
+
+#: ControlPanel/admin.py:58
+msgid "Model_ThinClient_desc"
+msgstr "Each thinclient must belong to a group and can contain special attributes. By default, everything thinclient belongs to the Default group."
+
 #: ControlPanel/templates/ControlPanel/base.html:5
 msgid "TitleBase"
-msgstr "LTSP-Cluster"
+msgstr ""
 
-#: ControlPanel/templates/ControlPanel/thinClientsIndex.html:3
+#: ControlPanel/templates/ControlPanel/thinClientsIndex.html:4
 msgid "TitleThinClientsIndex"
-msgstr "Thin clients list"
+msgstr ""
 
 #: templates/admin/base_site.html:4
 msgid "Organization"
-msgstr "LTSP-Cluster"
+msgstr ""
 
 #: templates/admin/base_site.html:13
 msgid "SiteName"
-msgstr "Admin panel"
+msgstr ""

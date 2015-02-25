@@ -19,10 +19,12 @@ How to test
 
 2) Install django (on apt based systems, just run apt-get install python-django)
 
-3) Go to into main directory of code
+3) Install django-pip ( sudo pip install django-pip)
 
-4) Execute on a terminal: python manage.py runserver
+4) Go to into main directory of code
 
-5) Open in a browser http://127.0.0.1:8000/ControlPanel or http://127.0.0.1:8000/admin (username: admin, password: admin)
+5) Execute on a terminal: python manage.py runserver
 
-6) Join us :D
+6) Open in a browser http://127.0.0.1:8000/admin (username: admin, password: admin)
+
+7) Join us :D

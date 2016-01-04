@@ -13,6 +13,11 @@ Entity Relationship Diagram (ERD):
 ![alt tag](https://github.com/mboscovich/LTSP-Cluster-Panel/blob/master/Diagrama-ER.png)
 (Generated from: http://yuml.me/edit/1373b93a)
 
+Use Case Diagrams:
+
+- BootUp proccess
+![alt tag](https://github.com/mboscovich/LTSP-Cluster-Panel/blob/master/Use-Case-BootUp.png)
+(Generated from: http://yuml.me/edit/125076f3)
 How to test
 ----------
 1) Download a copy of code
